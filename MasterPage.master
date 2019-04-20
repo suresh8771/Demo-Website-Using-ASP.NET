@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Master.css" rel="stylesheet" />
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap.js"></script>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script>
+        $(document).ready(function () {
+            $("#websitelogo").mouseover(function () {
+                $("#websitelogo").css("color", "black")
+            });
+            $("#websitelogo").mouseout(function () {
+                $("#websitelogo").css("color", "white")
+            });
+            $("#websitelogo").click(function () {
+                $("#websitelogo").css("text-decoration", "underline")
+                    
+            });
+            $(".social").click(function () {
+                load("#")
+            
+
+            });
+            $("#contactus").mouseover(function () {
+                $("#contactus").css("margin-left", "0")
+            });
+            $("#contactus").mouseout(function () {
+                $("#contactus").css("margin-left", "-250px")
+            });
+        });
+        
+        
+
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav id="nav1" class="font">
+        
+        <div onclick="location.href='default.aspx'" id="websitelogo" class="font">Project</div>
+        <div style="float:left; margin-left:20%; margin-top:5px;">
+            <asp:Button ID="Buttonhome" runat="server" class="navi font btn btn-lg btn-link" style="color: white;" Text="Home" OnClick="Buttonhome_Click" />
+             <asp:Button ID="Buttonabout" runat="server" class="navi font btn btn-lg btn-link" style="color: white;" Text="About" OnClick="Buttonabout_Click" />
+             <asp:Button ID="Buttonproducts" runat="server" class="navi font btn btn-lg btn-link" style="color: white;" Text="Products" OnClick="Buttonproducts_Click" />     
+        </div>
+        <div " style="float:right; margin-right:10%; margin-top:15px;">
+            
+                
+                <i onclick="location.href='https://www.youtube.com'" id="youtube" class="social acc fa fa-youtube-play" style="font-size:32px"></i>
+                <i  onclick="location.href='https://www.facebook.com'"id="facebook" class="social acc fa fa-facebook-official" style="font-size:32px"></i>
+                
+            <i   onclick="location.href='https://www.twitter.com'" id="twitter"class="social acc fa fa-twitter" style="font-size:32px"></i> 
+             
+        </div>
+    </nav>
+        <div>
+        <div id="contactus" style="position:fixed; background-color:dodgerblue; height:200px; float:left; width:300px; top:50%; bottom:50%;  margin-top:-100px; margin-left:-250px; border-radius: 0px 25px 25px 0px;">
+             <div style=" width:200px; position:absolute; margin-top:42px; margin-left:20px;">
+                <asp:TextBox class="form-control" ID="TextBox1" runat="server" placeholder="Full Name" style="margin-bottom:5px;"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="TextBox2" runat="server" placeholder="Email" style="margin-bottom:15px;"></asp:TextBox>
+                 <asp:Button ID="Button1" class="btn btn-block" runat="server"  Text="Submit" OnClick="Button1_Click" />
+            </div>
+            <div style=" float:right; transform:rotate(90deg); margin-top:82px; margin-right:-50px; font-size:20pt;  " class="fontW"> Contact Us </div>  
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+        </asp:ContentPlaceHolder>
+    </div>
+        <div id="footer">
+                <div> </div>
+                <div class="font footercontent">© 2017 Project | Lovingly built by Muhammad Salik & Muhammad Areeb</div>
+            <div class="font footercontent">Template sponsor: Salik's Laptop & Areeb's Brain</div>
+            
+
+            </div>
+         
+    </form>
+</body>
+</html>

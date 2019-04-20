@@ -1,0 +1,56 @@
+﻿#nav1 {
+   
+    top:0px;
+    left:0px;
+    right:0px;
+    height:60px;
+    background-color:dodgerblue;
+    color:white;
+}
+
+.font{
+
+    font-family:'Century Gothic';
+
+}
+#websitelogo{
+        float:left;
+        margin-top: 10px;
+        margin-left:10%;
+        font-size:24pt;
+}
+.navi{
+
+    float: left;
+    margin-left:0px;
+    color:white;
+    font-size:15pt;
+   
+                                      
+}
+
+.acc{
+
+    float:right;
+    margin-right:15px;
+    color:white;
+    font-size:12pt;
+
+}
+#footer{
+    
+    background-color:blueviolet;
+    height:60px;
+}
+.footercontent {
+    color: white;
+    font-size: 9pt;
+   
+    margin-left: 5%;
+}
+
+.fontW{
+    font-family:'Century Gothic';
+    color:white;
+
+}
